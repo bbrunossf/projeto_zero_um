@@ -6,6 +6,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import plotly.express as px
+import matplotlib
 from PIL import Image 
 from sklearn import tree
 from sklearn import tree as tr
