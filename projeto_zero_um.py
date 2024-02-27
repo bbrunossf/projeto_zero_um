@@ -8,7 +8,7 @@ import pandas as pd
 import plotly.express as px
 from PIL import Image 
 from sklearn import tree
-import sklearn
+from sklearn import tree as tr
 from sklearn.tree import DecisionTreeClassifier
 
 #-------------------------------------Início das Funções-----------------------------------
@@ -61,12 +61,12 @@ x_atributos=df_dados_completos.drop(columns="loyalty_card")
 y_rotulos=df_dados_completos.loc[:, "loyalty_card"]
 
 # Definição do Algoritimo
-modelo=tree.DecisionTreeClassifier(max_depth=3) 
+modelo=tr.DecisionTreeClassifier(max_depth=3) 
 
 # Treinamento do Algoritimo
 modelo_treinado=modelo.fit(x_atributos, y_rotulos)
 
-tree.plot_tree(modelo_treinado, filled=True);
+tr.plot_tree(modelo_treinado, filled=True);
 
 # ==================================================
 # Barra Lateral
