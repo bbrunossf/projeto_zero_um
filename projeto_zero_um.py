@@ -2,13 +2,13 @@
 # Bibliotecas Necessárias
 # ==================================================
 import sqlite3
-import pandas as pd
-import numpy as np
 import streamlit as st
+import numpy as np
+import pandas as pd
 import plotly.express as px
-import plotly.graph_objects as go
 from PIL import Image 
-from sklearn import tree as tr
+from sklearn import tree
+import sklearn
 from sklearn.tree import DecisionTreeClassifier
 
 #-------------------------------------Início das Funções-----------------------------------
@@ -61,12 +61,12 @@ x_atributos=df_dados_completos.drop(columns="loyalty_card")
 y_rotulos=df_dados_completos.loc[:, "loyalty_card"]
 
 # Definição do Algoritimo
-modelo=tr.DecisionTreeClassifier(max_depth=3) 
+modelo=tree.DecisionTreeClassifier(max_depth=3) 
 
 # Treinamento do Algoritimo
 modelo_treinado=modelo.fit(x_atributos, y_rotulos)
 
-tr.plot_tree(modelo_treinado, filled=True);
+tree.plot_tree(modelo_treinado, filled=True);
 
 # ==================================================
 # Barra Lateral
