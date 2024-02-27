@@ -10,7 +10,7 @@ import matplotlib
 from PIL import Image 
 from sklearn import tree
 from sklearn import tree as tr
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import DecisionTreeClassifier, plot_tree
 
 #-------------------------------------Início das Funções-----------------------------------
 
